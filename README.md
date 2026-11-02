@@ -37,3 +37,11 @@ Spam messages waste time and pose security risks. The challenge here is not just
 * **Key Tools:** Python, Google Colab, Scikit-learn, Pandas
 
 ---
+## 4. Milestone 2: Data Preprocessing & Baseline Prototype
+
+* **Dataset**: Cleaned UCI SMS Spam Collection (5,171 unique messages after dropping 403 duplicates).
+* **Preprocessing**: Stratified 80/20 train/test split, lowercasing, English stop words removal, and TF-IDF vectorization (max 3,000 features)
+* **Models Evaluated**:
+  * `DummyClassifier` (baseline floor): 87.33% Accuracy, 0.00% F1-score
+  * `MultinomialNB` (working prototype): 97.39% Accuracy, 100.00% Precision, 79.39% Recall, 88.51% F1-score
+* **Key Findings**: Zero false positives on test data (100% precision); full pipeline verified end-to-end on sample messages.
