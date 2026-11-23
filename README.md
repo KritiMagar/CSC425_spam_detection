@@ -45,3 +45,12 @@ Spam messages waste time and pose security risks. The challenge here is not just
   * `DummyClassifier` (baseline floor): 87.33% Accuracy, 0.00% F1-score
   * `MultinomialNB` (working prototype): 97.39% Accuracy, 100.00% Precision, 79.39% Recall, 88.51% F1-score
 * **Key Findings**: Zero false positives on test data (100% precision); full pipeline verified end-to-end on sample messages.
+
+  ---
+## 5. Milestone 3: Logistic Regression & Threshold Tuning
+
+- **Model & Tuning**: Trained `LogisticRegression` on the 3,000 TF-IDF features and swept probability thresholds from 0.50 down to 0.20.
+- **Results**:
+  - `LogisticRegression` (Default 0.50): 95.94% Accuracy, 97.85% Precision, 69.47% Recall, 81.25% F1-score[cite: 10]
+  - `LogisticRegression` (Tuned 0.25): 97.39% Accuracy, 91.94% Precision, 87.02% Recall, 89.41% F1-score[cite: 10]
+- **Key Findings**: Lowering the cutoff to 0.25 fixed low spam probability scores caused by class imbalance, catching 114/131 spam messages (12 more than Naive Bayes) while keeping false positives low (10/903 ham).
